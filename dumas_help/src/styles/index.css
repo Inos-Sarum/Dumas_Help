@@ -1,1 +1,18 @@
-/* No CSS *//*# sourceMappingURL=index.css.map */
+body {
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+.header-container {
+  height: 170px;
+}
+
+.header-container .logo-container {
+  height: 100%;
+}
+
+.header-container .logo-container img {
+  height: 100%;
+}
+/*# sourceMappingURL=index.css.map */

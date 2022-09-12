@@ -1,9 +1,10 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "ACIA,AAAA,IAAI,CAAC;EACH,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;EACV,OAAO,EAAE,KAAK;CACf;;ACRD,AAAA,iBAAiB,CAAC;EAChB,MAAM,EAAE,KAAK;CASd;;AAVD,AAGE,iBAHe,CAGf,eAAe,CAAC;EACd,MAAM,EAAE,IAAI;CAKb;;AATH,AAMI,iBANa,CAGf,eAAe,CAGb,GAAG,CAAC;EACF,MAAM,EAAE,IAAI;CACb",
     "sources": [
         "index.scss",
-        "_settings.scss"
+        "_settings.scss",
+        "components/_header.scss"
     ],
     "names": [],
     "file": "index.css"
