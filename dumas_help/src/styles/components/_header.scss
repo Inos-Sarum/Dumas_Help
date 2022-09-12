@@ -1,11 +1,46 @@
 .header-container {
-  height: 170px;
+  position: relative;
+  height: 7vh;
+  @include grid(25% 50% 25%, 100%, "", center);
+  background: $white1;
 
   .logo-container {
     height: 100%;
+    @include flex("", "", "", center);
 
     img {
+      max-height: 80%;
+      padding: 10px;
+    }
+  }
+
+  .nav-container {
+    @include grid(25% 25% 25% 25%, 100%, "", center);
+    text-align: center;
+    height: 100%;
+
+    a {
+      @include flex("", "", center, center);
       height: 100%;
+      border-bottom: 2px solid $translucent;
+      font-size: 1.1rem;
+      letter-spacing: 3px;
+      transition: 0.3s ease;
+      text-transform: uppercase;
+
+      &:hover {
+        border-bottom: 2px solid $grey1;
+
+        div {
+          text-shadow: 0 2px 3px $shadow;
+        }
+      }
+
+      div {
+        transition: 0.3s ease;
+        font-family: $mont;
+        font-weight: 600;
+      }
     }
   }
 }

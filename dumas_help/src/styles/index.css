@@ -1,18 +1,220 @@
+@font-face {
+  font-family: "montserrat";
+  src: url("../assets/fonts/Montserrat-Light.ttf");
+}
+
 body {
   margin: 0;
   padding: 0;
   display: block;
+  background: #f1f1f1;
+  font-family: "montserrat";
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+a {
+  text-decoration: none;
+  color: #7a7a7a;
+}
+
+a:visited {
+  color: #7a7a7a;
+}
+
+a:focus {
+  color: #7a7a7a;
+}
+
+h2 {
+  font-family: "montserrat";
 }
 
 .header-container {
-  height: 170px;
+  position: relative;
+  height: 7vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 25% 50% 25%;
+      grid-template-columns: 25% 50% 25%;
+  -ms-grid-rows: 100%;
+      grid-template-rows: 100%;
+  -webkit-box-pack: "";
+      -ms-flex-pack: "";
+          justify-content: "";
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: white;
 }
 
 .header-container .logo-container {
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: "";
+          flex-direction: "";
+  -ms-flex-wrap: "";
+      flex-wrap: "";
+  -webkit-box-pack: "";
+      -ms-flex-pack: "";
+          justify-content: "";
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .header-container .logo-container img {
+  max-height: 80%;
+  padding: 10px;
+}
+
+.header-container .nav-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 25% 25% 25% 25%;
+      grid-template-columns: 25% 25% 25% 25%;
+  -ms-grid-rows: 100%;
+      grid-template-rows: 100%;
+  -webkit-box-pack: "";
+      -ms-flex-pack: "";
+          justify-content: "";
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
   height: 100%;
+}
+
+.header-container .nav-container a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: "";
+          flex-direction: "";
+  -ms-flex-wrap: "";
+      flex-wrap: "";
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  border-bottom: 2px solid rgba(0, 0, 0, 0);
+  font-size: 1.1rem;
+  letter-spacing: 3px;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  text-transform: uppercase;
+}
+
+.header-container .nav-container a:hover {
+  border-bottom: 2px solid #afafaf;
+}
+
+.header-container .nav-container a:hover div {
+  text-shadow: 0 2px 3px rgba(122, 122, 122, 0.504);
+}
+
+.header-container .nav-container a div {
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  font-family: "montserrat";
+  font-weight: 600;
+}
+
+.form-container {
+  height: 83vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+  -ms-grid-rows: 100%;
+      grid-template-rows: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: top;
+      -ms-flex-align: top;
+          align-items: top;
+  margin: 0 auto;
+  width: 90%;
+  text-align: center;
+}
+
+.form-container .category-container {
+  margin-top: 5%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: "";
+          flex-direction: "";
+  -ms-flex-wrap: "";
+      flex-wrap: "";
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  align-items: center;
+  height: 50%;
+  padding: 10px;
+  color: white;
+  letter-spacing: 2px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+
+.form-container .category-container:hover {
+  background: #afafaf;
+}
+
+.form-container .category-container:hover h3 {
+  text-shadow: 0 2px 3px #585858;
+}
+
+.form-container .category-container:hover h3:hover:after {
+  text-shadow: 0 2px 3px #585858;
+}
+
+.form-container .customer {
+  background: #5866d2;
+}
+
+.form-container .company {
+  background: #273388;
+}
+
+.form-container h3 {
+  position: relative;
+  padding: 10px;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+
+.form-container h3:after {
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 100%;
+  background: white;
+  bottom: 0;
+  left: 0;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
 }
 /*# sourceMappingURL=index.css.map */

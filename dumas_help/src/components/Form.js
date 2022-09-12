@@ -41,6 +41,13 @@ const ContactForm = () => {
 
   return (
     <div className="form-container">
+      <div className="category-container customer">
+        <h3>Particulier</h3>
+      </div>
+      <div className="category-container company">
+        <h3>Entreprise</h3>
+      </div>
+
       <h2>Contactez-nous</h2>
       <form ref={form} onSubmit={sendEmail} className="form-content">
         <label>Nom</label>

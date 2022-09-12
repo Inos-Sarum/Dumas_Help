@@ -1,9 +1,80 @@
 // Generals //
 
+// Variables //
+
+// Fonts ->
+
+@font-face {
+  font-family: "montserrat";
+  src: url("../assets/fonts/Montserrat-Light.ttf");
+}
+
+$mont: "montserrat";
+
+// Colors ->
+
+$white1: rgb(255, 255, 255);
+$white2: rgb(241, 241, 241);
+
+$grey1: rgb(175, 175, 175);
+$grey2: rgb(122, 122, 122);
+$grey3: rgb(88, 88, 88);
+
+$black1: rgb(27, 27, 27);
+$black2: rgb(17, 17, 17);
+
+$blue1: rgb(88, 102, 210);
+$blue2: rgb(39, 51, 136);
+
+$shadow: rgba(122, 122, 122, 0.504);
+$translucent: rgba(0, 0, 0, 0);
+
+// @MIXIN //
+
+// -> Flex
+
+@mixin flex($d, $w, $jc, $ai) {
+  display: flex;
+  flex-direction: $d;
+  flex-wrap: $w;
+  justify-content: $jc;
+  align-items: $ai;
+}
+
+// -> Grid
+
+@mixin grid($gtc, $gtr, $jc, $ai) {
+  display: grid;
+  grid-template-columns: $gtc;
+  grid-template-rows: $gtr;
+  justify-content: $jc;
+  align-items: $ai;
+}
+
 // -> General style
 
 body {
   margin: 0;
   padding: 0;
   display: block;
+  background: $white2;
+  font-family: $mont;
+  user-select: none;
+}
+
+a {
+  text-decoration: none;
+  color: $grey2;
+
+  &:visited {
+    color: $grey2;
+  }
+
+  &:focus {
+    color: $grey2;
+  }
+}
+
+h2 {
+  font-family: $mont;
 }
