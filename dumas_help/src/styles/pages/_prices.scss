@@ -1,0 +1,44 @@
+h2 {
+  width: fit-content;
+  margin: 20px auto;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 130%;
+}
+
+.tarif-container {
+  height: 80vh;
+  margin: 0 5%;
+  @include grid(33% 34% 33%, "", center, center);
+
+  ul {
+    @include flex(column, "", center, center);
+    height: 100%;
+    list-style: none;
+    padding: 0;
+    background: $white1;
+
+    li {
+      @include flex(column, "", center, center);
+      text-align: center;
+      border-left: 2px solid $grey1;
+      border-bottom: 2px solid $grey1;
+      height: 100%;
+      width: 100%;
+      transition: 0.2s ease;
+
+      &:first-child {
+        border-top: 2px solid $grey1;
+      }
+
+      &:hover {
+        background: $blue2;
+        color: $white1;
+      }
+    }
+
+    &:last-child {
+      border-right: 2px solid $grey1;
+    }
+  }
+}

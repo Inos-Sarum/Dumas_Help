@@ -1,3 +1,15 @@
+// General //
+
 @import "./settings";
+
+// Pages //
+@import "./pages/contact";
+@import "./pages/prestations";
+@import "./pages/prices";
+@import "./pages/contact";
+@import "./pages/notfound";
+
+// Components //
 @import "./components/header";
-@import "./components/form";
+@import "./components/formCompany";
+@import "./components/formIndividual";

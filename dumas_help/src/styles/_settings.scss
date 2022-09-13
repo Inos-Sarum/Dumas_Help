@@ -23,8 +23,8 @@ $grey3: rgb(88, 88, 88);
 $black1: rgb(27, 27, 27);
 $black2: rgb(17, 17, 17);
 
-$blue1: rgb(88, 102, 210);
-$blue2: rgb(39, 51, 136);
+$blue1: rgb(39, 51, 136);
+$blue2: rgb(23, 29, 76);
 
 $shadow: rgba(122, 122, 122, 0.504);
 $translucent: rgba(0, 0, 0, 0);
@@ -49,6 +49,16 @@ $translucent: rgba(0, 0, 0, 0);
   grid-template-rows: $gtr;
   justify-content: $jc;
   align-items: $ai;
+}
+
+// Effects classes //
+
+.hidden {
+  opacity: 0;
+}
+
+.visible {
+  opacity: 1;
 }
 
 // -> General style

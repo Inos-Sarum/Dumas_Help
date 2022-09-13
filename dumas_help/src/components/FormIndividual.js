@@ -40,17 +40,13 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="form-container">
-      <div className="category-container customer">
-        <h3>Particulier</h3>
-      </div>
-      <div className="category-container company">
-        <h3>Entreprise</h3>
-      </div>
-
+    <div className="form-container customer">
       <h2>Contactez-nous</h2>
+      <h3>PARTICULIERS</h3>
       <form ref={form} onSubmit={sendEmail} className="form-content">
         <label>Nom</label>
+        <input type="text" name="name" required autoComplete="off" />
+        <label>N° Téléphone</label>
         <input type="text" name="name" required autoComplete="off" />
         <label>Email</label>
         <input
