@@ -5,16 +5,23 @@
 // Fonts ->
 
 @font-face {
-  font-family: "montserrat";
+  font-family: "montserrat-light";
   src: url("../assets/fonts/Montserrat-Light.ttf");
 }
 
-$mont: "montserrat";
+@font-face {
+  font-family: "montserrat-medium";
+  src: url("../assets/fonts/Montserrat-Medium.ttf");
+}
+
+$montL: "montserrat-light";
+$montM: "montserrat-medium";
 
 // Colors ->
 
 $white1: rgb(255, 255, 255);
 $white2: rgb(241, 241, 241);
+$white3: rgb(227, 227, 227);
 
 $grey1: rgb(175, 175, 175);
 $grey2: rgb(122, 122, 122);
@@ -51,8 +58,15 @@ $translucent: rgba(0, 0, 0, 0);
   align-items: $ai;
 }
 
-// Effects classes //
+// -> Background Animation
 
+@keyframes growAndReduce1 {
+  50% {
+    transform: scale(1.1) /*translate(-20px, -20px)*/;
+  }
+}
+
+// Effects classes //
 .hidden {
   opacity: 0;
 }
@@ -67,8 +81,8 @@ body {
   margin: 0;
   padding: 0;
   display: block;
-  background: $white2;
-  font-family: $mont;
+  background: $white3;
+  font-family: $montL;
   user-select: none;
 }
 
@@ -86,5 +100,5 @@ a {
 }
 
 h2 {
-  font-family: $mont;
+  font-family: $montL;
 }

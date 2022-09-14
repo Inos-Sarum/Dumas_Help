@@ -1,0 +1,23 @@
+.presentation {
+  h2 {
+    margin: 70px auto 50px auto;
+    padding-bottom: 10px;
+    border-bottom: 3px solid $blue1;
+  }
+}
+
+p {
+  font-family: $montM;
+  padding: 10px;
+  background: $white1;
+  color: $grey3;
+  position: relative;
+  width: 90%;
+  margin: 0 auto 30px;
+  text-align: left;
+  line-height: 30px;
+  letter-spacing: 2px;
+  font-weight: 400;
+  font-size: 1.1rem;
+  box-shadow: 0 3px 5px $shadow;
+}

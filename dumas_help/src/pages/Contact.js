@@ -5,13 +5,38 @@ import Header from "../components/Header";
 
 const Contact = () => {
   const [customerType, setCustomerType] = useState("");
-  const formCloser = document.querySelector(".form-closer");
 
   const customerTypeDisplayer = () => {
     if (customerType === "company") {
-      return <FormCompany />;
+      return (
+        <div>
+          <button
+            className="form-closer"
+            onClick={() => {
+              setCustomerType("");
+            }}
+          >
+            <span className="first-bar"></span>
+            <span className="second-bar"></span>
+          </button>
+          <FormCompany />;
+        </div>
+      );
     } else if (customerType === "individual") {
-      return <FormIndividual />;
+      return (
+        <div>
+          <button
+            className="form-closer"
+            onClick={() => {
+              setCustomerType("");
+            }}
+          >
+            <span className="first-bar"></span>
+            <span className="second-bar"></span>
+          </button>
+          <FormIndividual />;
+        </div>
+      );
     } else {
       return "";
     }
@@ -38,7 +63,7 @@ const Contact = () => {
           <h3>Entreprise</h3>
         </div>
       </div>
-      <button
+      {/* <button
         className="form-closer"
         onClick={() => {
           setCustomerType("");
@@ -46,7 +71,7 @@ const Contact = () => {
       >
         <span className="first-bar"></span>
         <span className="second-bar"></span>
-      </button>
+      </button> */}
       <div className="formDisplayer">{customerTypeDisplayer()}</div>
     </div>
   );
