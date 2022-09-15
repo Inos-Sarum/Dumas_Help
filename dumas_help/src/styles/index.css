@@ -42,6 +42,15 @@ body {
           user-select: none;
 }
 
+::-webkit-scrollbar-thumb {
+  color: #273388;
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  color: #273388;
+}
+
 a {
   text-decoration: none;
   color: #7a7a7a;
@@ -59,27 +68,100 @@ h2 {
   font-family: "montserrat-light";
 }
 
+.presentation {
+  margin-top: 10vh;
+}
+
 .presentation h2 {
   margin: 70px auto 50px auto;
   padding-bottom: 10px;
   border-bottom: 3px solid #273388;
 }
 
-p {
-  font-family: "montserrat-medium";
-  padding: 10px;
+.presentation p {
+  position: relative;
+  margin: 0 10%;
+  border-radius: 10px;
+  padding: 40px;
   background: white;
   color: #585858;
-  position: relative;
-  width: 90%;
-  margin: 0 auto 30px;
-  text-align: left;
+  font-family: "montserrat-medium";
+  text-align: center;
   line-height: 30px;
   letter-spacing: 2px;
   font-weight: 400;
   font-size: 1.1rem;
   -webkit-box-shadow: 0 3px 5px rgba(122, 122, 122, 0.504);
           box-shadow: 0 3px 5px rgba(122, 122, 122, 0.504);
+}
+
+.presentation p:after {
+  position: absolute;
+  content: "";
+  border-right: 3px solid #f1f1f1;
+  border-bottom: 3px solid #f1f1f1;
+  border-radius: 0 3px 7px 3px;
+  height: 30px;
+  width: 45px;
+  bottom: 7px;
+  right: 7px;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+.presentation p:hover:after {
+  border-right: 3px solid #273388;
+  border-bottom: 3px solid #273388;
+  height: 40px;
+  width: 80px;
+}
+
+.presentation .img-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: "";
+      flex-wrap: "";
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 30px 10%;
+  height: 75vh;
+}
+
+.presentation .img-container .img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+  -webkit-box-shadow: 0 3px 5px rgba(122, 122, 122, 0.775);
+          box-shadow: 0 3px 5px rgba(122, 122, 122, 0.775);
+}
+
+.presentation .img-container .img:hover {
+  border-radius: 30px;
+  -webkit-box-shadow: 0 3px 5px rgba(122, 122, 122, 0.775);
+          box-shadow: 0 3px 5px rgba(122, 122, 122, 0.775);
+}
+
+.presentation .img-container .img1 {
+  background: url("../../assets/img/00-red-sky.jpg") bottom/cover;
+}
+
+.presentation .img-container .img2 {
+  background: url("../../assets/img/00-festival.jpg") bottom/cover;
+}
+
+.presentation .img-container .img3 {
+  background: url("../../assets/img/00-thinking.jpg") center/cover;
 }
 
 .form-choice {
@@ -96,7 +178,7 @@ p {
   -webkit-box-align: top;
       -ms-flex-align: top;
           align-items: top;
-  margin: 50px auto;
+  margin: 10vh auto 50px;
   width: 90%;
   text-align: center;
 }
@@ -137,8 +219,9 @@ p {
   text-shadow: 0 2px 3px #585858;
 }
 
-.form-choice .category-container:hover h3:hover:after {
-  text-shadow: 0 3px 3px #585858;
+.form-choice .category-container:hover h3:after {
+  -webkit-box-shadow: 0 3px 3px rgba(122, 122, 122, 0.504);
+          box-shadow: 0 3px 3px rgba(122, 122, 122, 0.504);
 }
 
 .form-choice .individual {
@@ -235,6 +318,10 @@ p {
   border-radius: 5px;
   -webkit-transition: 0.5s ease;
   transition: 0.5s ease;
+}
+
+body {
+  margin-top: 10vh;
 }
 
 h2 {
@@ -338,7 +425,7 @@ h2 {
   -webkit-box-align: top;
       -ms-flex-align: top;
           align-items: top;
-  margin: 50px auto;
+  margin: 10vh auto 50px;
   width: 90%;
   text-align: center;
 }
@@ -379,8 +466,9 @@ h2 {
   text-shadow: 0 2px 3px #585858;
 }
 
-.form-choice .category-container:hover h3:hover:after {
-  text-shadow: 0 3px 3px #585858;
+.form-choice .category-container:hover h3:after {
+  -webkit-box-shadow: 0 3px 3px rgba(122, 122, 122, 0.504);
+          box-shadow: 0 3px 3px rgba(122, 122, 122, 0.504);
 }
 
 .form-choice .individual {
@@ -480,12 +568,15 @@ h2 {
 }
 
 .header-container {
-  position: relative;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
   height: 7vh;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 25% 50% 25%;
-      grid-template-columns: 25% 50% 25%;
+  -ms-grid-columns: 20% 60% 20%;
+      grid-template-columns: 20% 60% 20%;
   -ms-grid-rows: 100%;
       grid-template-rows: 100%;
   -webkit-box-pack: "";

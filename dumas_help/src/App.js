@@ -5,7 +5,7 @@ import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import "./styles/index.scss";
 import Prestations from "./pages/Prestations";
-import Prices from "./pages/Prices";
+import Informations from "./pages/Informations";
 
 const App = () => {
   return (
@@ -14,7 +14,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/prestations" element={<Prestations />} />
-        <Route path="/tarifs" element={<Prices />} />
+        <Route path="/informations" element={<Informations />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>

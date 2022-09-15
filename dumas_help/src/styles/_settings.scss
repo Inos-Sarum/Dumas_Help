@@ -34,6 +34,7 @@ $blue1: rgb(39, 51, 136);
 $blue2: rgb(23, 29, 76);
 
 $shadow: rgba(122, 122, 122, 0.504);
+$shadowL: rgba(122, 122, 122, 0.775);
 $translucent: rgba(0, 0, 0, 0);
 
 // @MIXIN //
@@ -84,6 +85,14 @@ body {
   background: $white3;
   font-family: $montL;
   user-select: none;
+}
+
+::-webkit-scrollbar-thumb {
+  color: $blue1;
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  color: $blue1;
 }
 
 a {

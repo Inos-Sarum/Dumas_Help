@@ -8,7 +8,10 @@ const Home = () => {
       <div className="presentation-container">
         <div className="presentation">
           <h2>The show must go on !</h2>
-          <p>
+          <div className="img-container">
+            <div className="img img1"></div>
+          </div>
+          <p className="p1">
             Les compagnies de spectacles privées sont souvent chargées d’un
             ensemble de tâches organisationnelles importantes. <br />
             La créations des shows, l’organisation des résidences,
@@ -17,18 +20,19 @@ const Home = () => {
             la sécurité sont tant d’éléments qui sont obligatoires aux
             compagnies pour exister et pour se faire connaitre.{" "}
           </p>
-          <br />
 
           <div className="img-container">
-            <img src="" alt="Image de festival" />
+            <div className="img img2"></div>
           </div>
-          <p>
+          <p className="p2">
             Il est essentiel pour les compagnies de pouvoir se consacrer à 100%
             à ces activités. Le temps devient alors très précieux et les tâches
             administratives sont parfois complexes, rébarbatives et souvent
             chronophages. <br />
+            <strong>
+              L’administratif ne devrait pas être une préoccupation{" "}
+            </strong>
             <br />
-            <strong>L’administratif n’est alors pas la priorité.</strong> <br />
             <br />
             Chez "DUMAS Help" notre vocation est d’aider les compagnies de
             spectacle privé dans absolument toutes leurs démarches, de les
@@ -41,9 +45,9 @@ const Home = () => {
             Nous nous chargeons de tout, c’est facile, simple et efficace, vous
             pourrez en toute liberté vous consacrer aux choses plus importantes.
           </p>
-        </div>
-        <div className="img-container">
-          <img src="" alt="Image de festival" />
+          <div className="img-container">
+            <div className="img img3"></div>
+          </div>
         </div>
       </div>
     </div>

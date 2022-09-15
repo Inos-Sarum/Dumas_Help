@@ -1,7 +1,7 @@
 .form-choice {
   height: 10vh;
   @include grid(50% 50%, 100%, center, top);
-  margin: 50px auto;
+  margin: 10vh auto 50px;
   width: 90%;
   text-align: center;
 
@@ -23,8 +23,8 @@
       h3 {
         text-shadow: 0 2px 3px $grey3;
 
-        &:hover:after {
-          text-shadow: 0 3px 3px $grey3;
+        &:after {
+          box-shadow: 0 3px 3px $shadow;
         }
       }
     }
