@@ -4,25 +4,82 @@ import {NavLink} from "react-router-dom";
 const Header = () => {
   return (
     <div className="header-container">
-      <div className="logo-container">
+      <NavLink to="/" className="logo-container">
         <img
-          src="./Modèles-Logos.png"
+          src="../img/Modèles-Logos.png"
           alt="Logo de l'entreprise d'aide administrative (comptabilité, gestion de comptes bancaires, démarches administratives diverses) Dumas Help"
         />
-      </div>
-      <div className="nav-container">
-        <NavLink to="/">
-          <div>Accueil</div>
-        </NavLink>
-        <NavLink to="/Prestations">
-          <div>Prestations</div>
-        </NavLink>
-        <NavLink to="/Informations">
-          <div>informations Utiles</div>
-        </NavLink>
-        <NavLink to="/Contact">
-          <div>Contact</div>
-        </NavLink>
+      </NavLink>
+
+      <div className="navigation">
+        <ul className="btn-container">
+          <NavLink
+            to="/"
+            className={(nav) => (nav.isActive ? " nav-btn " : "nav-btn")}
+          >
+            <li>Accueil</li>
+          </NavLink>
+          <NavLink
+            to="/prestations"
+            className={(nav) => (nav.isActive ? " nav-btn " : "nav-btn")}
+          >
+            <li>Prestations</li>
+            <ul className="subtn-container">
+              <NavLink
+                to=""
+                className={(nav) => (nav.isActive ? "subtn " : "subtn")}
+              >
+                <li>Professionel</li>
+              </NavLink>
+              <NavLink
+                to=""
+                className={(nav) => (nav.isActive ? "subtn " : ".hidden")}
+              >
+                <li>Particulier</li>
+              </NavLink>
+            </ul>
+          </NavLink>
+          <NavLink
+            to=""
+            className={(nav) => (nav.isActive ? " nav-btn " : "nav-btn")}
+          >
+            <li>Informations Utiles</li>
+            <ul className="subtn-container">
+              <NavLink
+                to=""
+                className={(nav) => (nav.isActive ? "subtn " : "subtn")}
+              >
+                <li>Professionel</li>
+              </NavLink>
+              <NavLink
+                to=""
+                className={(nav) => (nav.isActive ? "subtn " : ".hidden")}
+              >
+                <li>Particulier</li>
+              </NavLink>
+            </ul>
+          </NavLink>
+          <NavLink
+            to="/contact"
+            className={(nav) => (nav.isActive ? " nav-btn " : "nav-btn")}
+          >
+            <li>Contact</li>
+            <ul className="subtn-container">
+              <NavLink
+                to=""
+                className={(nav) => (nav.isActive ? "subtn " : "subtn")}
+              >
+                <li>Professionel</li>
+              </NavLink>
+              <NavLink
+                to=""
+                className={(nav) => (nav.isActive ? "subtn " : ".hidden")}
+              >
+                <li>Particulier</li>
+              </NavLink>
+            </ul>
+          </NavLink>
+        </ul>
       </div>
     </div>
   );

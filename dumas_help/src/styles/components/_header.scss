@@ -6,6 +6,7 @@
   height: 7vh;
   @include grid(20% 60% 20%, 100%, "", center);
   background: $white1;
+  box-shadow: 0 2px 3px $shadow;
 
   .logo-container {
     height: 100%;
@@ -14,35 +15,69 @@
     img {
       max-height: 80%;
       padding: 10px;
+      transition: 0.3s ease;
+
+      &:hover {
+        transform: translateX(10px);
+      }
     }
   }
 
-  .nav-container {
-    @include grid(25% 25% 25% 25%, 100%, "", center);
+  .navigation {
+    padding: 0;
     text-align: center;
     height: 100%;
 
-    a {
-      @include flex("", "", center, center);
+    .btn-container {
+      position: relative;
+      @include grid(25% 25% 25% 25%, 100%, "", center);
+      margin: 0;
+      padding: 0;
       height: 100%;
-      border-bottom: 2px solid $translucent;
-      font-size: 1.1rem;
-      letter-spacing: 3px;
-      transition: 0.3s ease;
-      text-transform: uppercase;
+      list-style: none;
 
-      &:hover {
-        border-bottom: 2px solid $grey1;
+      .nav-btn {
+        position: relative;
+        @include flex("", "", center, center);
+        height: 100%;
+        border-bottom: 2px solid $translucent;
+        opacity: 1;
+        transition: 2s ease;
 
-        div {
-          text-shadow: 0 2px 3px $shadow;
+        &:hover {
+          .subtn-container {
+            opacity: 1;
+            transform: translateY(0);
+          }
         }
       }
 
-      div {
-        transition: 0.3s ease;
-        font-family: $montM;
-        font-weight: 400;
+      .subtn-container {
+        position: absolute;
+        @include flex(column, "", "", center);
+        margin: 0;
+        padding: 0;
+        height: 14vh;
+        width: 100%;
+        top: 7vh;
+        list-style: none;
+        opacity: 0;
+        transition: 0.5s ease;
+        box-shadow: 0 3px 3px $shadow;
+        border-radius: 0 0 10px 10px;
+        transform: translateY(-14vh);
+
+        .subtn {
+          @include flex(column, "", center, center);
+          height: 100%;
+          width: 100%;
+          z-index: -2;
+          background: $white1;
+
+          &:last-child {
+            border-radius: 0 0 10px 10px;
+          }
+        }
       }
     }
   }

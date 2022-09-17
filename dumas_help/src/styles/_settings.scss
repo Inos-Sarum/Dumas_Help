@@ -14,8 +14,14 @@
   src: url("../assets/fonts/Montserrat-Medium.ttf");
 }
 
+@font-face {
+  font-family: "edwardian-script";
+  src: url("../assets/fonts/ITCEDSCR.TTF");
+}
+
 $montL: "montserrat-light";
 $montM: "montserrat-medium";
+$edwa: "edwardian-script";
 
 // Colors ->
 
@@ -67,15 +73,6 @@ $translucent: rgba(0, 0, 0, 0);
   }
 }
 
-// Effects classes //
-.hidden {
-  opacity: 0;
-}
-
-.visible {
-  opacity: 1;
-}
-
 // -> General style
 
 body {
@@ -85,6 +82,7 @@ body {
   background: $white3;
   font-family: $montL;
   user-select: none;
+  scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -110,4 +108,25 @@ a {
 
 h2 {
   font-family: $montL;
+}
+
+// Style forms
+
+// Send failure or success message
+
+.form-message {
+  height: 10px;
+
+  p {
+    padding: 10px;
+  }
+
+  .success {
+    background: green;
+    color: $white1;
+  }
+  .error {
+    background: green;
+    color: $white1;
+  }
 }
