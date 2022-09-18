@@ -4,7 +4,7 @@
   width: 100%;
   z-index: 1;
   height: 7vh;
-  @include grid(20% 60% 20%, 100%, "", center);
+  @include grid(35% 60% 5%, 100%, "", center);
   background: $white1;
   box-shadow: 0 2px 3px $shadow;
 
