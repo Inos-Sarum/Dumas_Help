@@ -44,7 +44,9 @@ const ContactForm = () => {
       <h2>Contactez-nous</h2>
       <h3>ENTREPRISES</h3>
       <form ref={form} onSubmit={sendEmail} className="form-content">
-        <label>Nom</label>
+        <label>Nom de l'entreprise</label>
+        <input type="text" name="name" required autoComplete="off" />
+        <label>Adresse</label>
         <input type="text" name="name" required autoComplete="off" />
         <label>N° Siret</label>
         <input type="text" name="name" required autoComplete="off" />
