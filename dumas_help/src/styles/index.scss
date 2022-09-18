@@ -1,16 +1,14 @@
 // General //
-
 @import "./settings";
 
 // Pages //
 @import "./pages/home";
-@import "./pages/accueil";
+@import "./pages/professional";
 @import "./pages/prestations";
 @import "./pages/informations";
-@import "./pages/contact";
+@import "./pages/formcompany";
+@import "./pages/formindividual";
 @import "./pages/notfound";
 
 // Components //
 @import "./components/header";
-@import "./components/formCompany";
-@import "./components/formIndividual";

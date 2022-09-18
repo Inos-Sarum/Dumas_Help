@@ -33,7 +33,7 @@ const Header = () => {
               </NavLink>
               <NavLink
                 to=""
-                className={(nav) => (nav.isActive ? "subtn " : ".hidden")}
+                className={(nav) => (nav.isActive ? "subtn " : "subtn")}
               >
                 <li>Particulier</li>
               </NavLink>
@@ -53,27 +53,27 @@ const Header = () => {
               </NavLink>
               <NavLink
                 to=""
-                className={(nav) => (nav.isActive ? "subtn " : ".hidden")}
+                className={(nav) => (nav.isActive ? "subtn " : "subtn")}
               >
                 <li>Particulier</li>
               </NavLink>
             </ul>
           </NavLink>
           <NavLink
-            to="/contact"
+            to=""
             className={(nav) => (nav.isActive ? " nav-btn " : "nav-btn")}
           >
             <li>Contact</li>
             <ul className="subtn-container">
               <NavLink
-                to=""
+                to="/formcompany"
                 className={(nav) => (nav.isActive ? "subtn " : "subtn")}
               >
                 <li>Professionel</li>
               </NavLink>
               <NavLink
-                to=""
-                className={(nav) => (nav.isActive ? "subtn " : ".hidden")}
+                to="/formindividual"
+                className={(nav) => (nav.isActive ? "subtn " : "subtn")}
               >
                 <li>Particulier</li>
               </NavLink>

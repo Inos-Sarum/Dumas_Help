@@ -35,6 +35,7 @@
       padding: 0;
       height: 100%;
       list-style: none;
+      z-index: 1;
 
       .nav-btn {
         position: relative;
@@ -42,12 +43,53 @@
         height: 100%;
         border-bottom: 2px solid $translucent;
         opacity: 1;
+        z-index: 1;
         transition: 2s ease;
+
+        &:first-child {
+          transition: 0.2s ease;
+
+          &:hover {
+            color: $blue1;
+          }
+
+          &:after {
+            position: absolute;
+            content: "";
+            border-right: 2px solid $translucent;
+            border-bottom: 2px solid $translucent;
+            border-radius: 0 2px 7px 2px;
+            height: 20px;
+            width: 35px;
+            bottom: 7px;
+            right: 7px;
+            transition: 0.3s ease;
+          }
+
+          &:hover {
+            &:after {
+              border-right: 2px solid $blue1;
+              border-bottom: 2px solid $blue1;
+              height: 30px;
+              width: 70px;
+            }
+          }
+        }
+
+        li {
+          font-family: $montL;
+          font-weight: 600;
+          font-size: 1.2rem;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+        }
 
         &:hover {
           .subtn-container {
-            opacity: 1;
-            transform: translateY(0);
+            z-index: 0;
+            animation: inOut 0.3s forwards;
+            /*opacity: 1;
+            transform: translateY(0);*/
           }
         }
       }
@@ -62,17 +104,63 @@
         top: 7vh;
         list-style: none;
         opacity: 0;
-        transition: 0.5s ease;
         box-shadow: 0 3px 3px $shadow;
         border-radius: 0 0 10px 10px;
         transform: translateY(-14vh);
+        z-index: 1;
 
         .subtn {
+          position: relative;
           @include flex(column, "", center, center);
           height: 100%;
           width: 100%;
-          z-index: -2;
           background: $white1;
+          transition: 0.2s ease;
+
+          &:before {
+            position: absolute;
+            content: "";
+            border-bottom: 2px solid $translucent;
+            border-left: 2px solid $translucent;
+            border-radius: 2px 0 2px 7px;
+            height: 0;
+            width: 0;
+            bottom: 7px;
+            left: 7px;
+            transition: 0.3s ease;
+          }
+
+          &:after {
+            position: absolute;
+            content: "";
+            border-bottom: 2px solid $translucent;
+            border-right: 2px solid $translucent;
+            border-radius: 0 2px 7px 2px;
+            height: 0;
+            width: 0;
+            bottom: 7px;
+            right: 7px;
+            transition: 0.3s ease;
+          }
+
+          &:hover {
+            color: $blue1;
+            text-shadow: 0 1px 3px $shadow;
+
+            &:before {
+              border-left: 2px solid $blue1;
+              border-bottom: 2px solid $blue1;
+              height: 30px;
+              width: 30px;
+            }
+
+            &:after {
+              border-right: 2px solid $blue1;
+              border-bottom: 2px solid $blue1;
+              height: 30px;
+              width: 30px;
+            }
+          }
 
           &:last-child {
             border-radius: 0 0 10px 10px;
@@ -80,5 +168,29 @@
         }
       }
     }
+  }
+}
+
+@keyframes inOut {
+  0% {
+    opacity: 0;
+    box-shadow: 0 3px 3px $translucent;
+    border-radius: 0 0 10px 10px;
+    transform: translateY(-14vh);
+  }
+  30% {
+    opacity: 0;
+    transform: translateY(-14vh);
+  }
+  50% {
+    box-shadow: 0 3px 3px $translucent;
+    border-radius: 0 0 10px 10px;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 1;
+    box-shadow: 0 3px 3px $shadow;
+    border-radius: 0 0 10px 10px;
+    transform: translateY(0);
   }
 }

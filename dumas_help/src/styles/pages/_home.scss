@@ -1,76 +1,68 @@
-.presentation {
-  margin-top: 10vh;
-
-  h2 {
-    margin: 70px auto 50px auto;
-    padding-bottom: 10px;
-    border-bottom: 3px solid $blue1;
-  }
-
-  p {
-    position: relative;
-    margin: 0 10%;
-    border-radius: 10px;
-    padding: 40px;
-    background: $white1;
-    color: $grey3;
-    font-family: $montM;
-    text-align: center;
-    line-height: 30px;
-    letter-spacing: 2px;
-    font-weight: 400;
-    font-size: 1.1rem;
-    box-shadow: 0 3px 5px $shadow;
-
-    &:after {
-      position: absolute;
-      content: "";
-      border-right: 3px solid $white2;
-      border-bottom: 3px solid $white2;
-      border-radius: 0 3px 7px 3px;
-      height: 30px;
-      width: 45px;
-      bottom: 7px;
-      right: 7px;
-      transition: 0.5s ease;
-    }
-
-    &:hover {
-      &:after {
-        border-right: 3px solid $blue1;
-        border-bottom: 3px solid $blue1;
-        height: 40px;
-        width: 80px;
-      }
-    }
-  }
+.accueil {
+  margin: 0 10%;
 
   .img-container {
     @include flex(column, "", center, center);
-    margin: 30px 10%;
-    height: 75vh;
+    margin: 15vh auto 0;
+    height: 30vh;
 
-    .img {
-      width: 100%;
+    img {
+      margin: 0 auto;
       height: 100%;
-      border-radius: 10px;
-      transition: 0.4s ease;
-      box-shadow: 0 3px 5px $shadowL;
+      width: auto;
+    }
+  }
+
+  h1 {
+    margin: 10vh auto 10vh;
+    font-family: $edwa;
+    text-align: center;
+    font-weight: 400;
+    letter-spacing: 5px;
+    font-size: 5rem;
+  }
+  .choice-container {
+    @include grid(50% 50%, 100%, center, center);
+    height: 10vh;
+    margin: 0 auto;
+
+    a {
+      @include flex(column, "", center, center);
+      cursor: pointer;
+      transition: 0.2s ease;
+
+      h2 {
+        color: $white1;
+        font-size: 1rem;
+        letter-spacing: 5px;
+        transition: 0.3s ease;
+      }
 
       &:hover {
-        border-radius: 30px;
-        box-shadow: 0 3px 5px $shadowL;
+        h2 {
+          text-shadow: 0 0 10px $white1;
+        }
       }
     }
 
-    .img1 {
-      background: url("../../assets/img/00-red-sky.jpg") bottom/cover;
+    .individual {
+      background: $blue1;
+      border-radius: 10px 0 0 10px;
+      height: 100%;
+
+      &:hover {
+        border-radius: 15px 0 0 15px;
+      }
     }
-    .img2 {
-      background: url("../../assets/img/00-festival.jpg") bottom/cover;
-    }
-    .img3 {
-      background: url("../../assets/img/00-thinking.jpg") center/cover;
+
+    .company {
+      background: $blue2;
+      border-radius: 0 10px 10px 0;
+      height: 100%;
+
+      &:hover {
+        border-radius: 0 15px 15px 0;
+      }
     }
   }
 }

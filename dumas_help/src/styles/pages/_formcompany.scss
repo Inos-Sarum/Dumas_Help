@@ -1,0 +1,150 @@
+.form-content {
+  @include grid(100%, "", "center", "center");
+  margin: -20px auto;
+  max-width: 800px;
+
+  .company-infos {
+    @include grid(100%, "", "center", "center");
+    list-style: none;
+    text-align: left;
+    background: $white1;
+    margin: 10px 0 1vh 0;
+    border-top: 2px solid $blue1;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 3px 5px $shadow;
+
+    h3 {
+      display: block;
+      text-align: center;
+      width: 100%;
+      margin: 10px auto;
+      padding: 10px 5px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      transition: 0.2s ease;
+    }
+
+    &:hover {
+      h3 {
+        color: $blue1;
+        transform: translateX(10px);
+      }
+    }
+
+    li {
+      width: 100%;
+      margin: 0 auto;
+
+      label {
+        display: block;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        margin: 0 auto;
+        padding: 10px 0 0;
+        width: 95%;
+        font-weight: 600;
+        color: $blue2;
+        font-family: $montM;
+        letter-spacing: 2px;
+      }
+
+      input {
+        display: block;
+        width: 95%;
+        margin: 0 auto 10px;
+        border: none;
+        border-bottom: 1px solid $grey1;
+        outline: none;
+        padding: 10px 5px;
+        box-shadow: 0 3px 5px $translucent;
+
+        font-size: 1rem;
+        font-family: $montL;
+        font-weight: 600;
+        letter-spacing: 1px;
+        color: $blue2;
+
+        transition: 0.2s ease;
+
+        &:hover {
+          border-radius: 5px 5px 0 0;
+          background: $white2;
+        }
+
+        &:focus {
+          padding: 10px 5px;
+          border-bottom: 1px solid $blue1;
+          color: $blue1;
+        }
+      }
+    }
+
+    .address {
+      width: 99%;
+      margin: 10px auto;
+      padding: 0;
+      @include grid(50% 50%, "", "center", "center");
+      list-style: none;
+      text-align: left;
+
+      li {
+        width: 97%;
+        margin: 10px;
+      }
+    }
+
+    #mess {
+      display: block;
+      margin: 10px auto;
+      border: 2px solid $translucent;
+      border-bottom: 1px solid $grey1;
+      border-radius: 5px;
+      padding: 5px 10px;
+      resize: none;
+      width: 93%;
+      height: 100px;
+      transition: 0.2s ease;
+      font-size: 1rem;
+      font-family: $montM;
+      color: $blue1;
+      outline: none;
+
+      &:hover {
+        background: $white2;
+      }
+
+      &:focus {
+        border: 1px solid $blue1;
+        border-radius: 10px;
+        outline: none;
+        color: $grey3;
+      }
+    }
+
+    .submit-btn {
+      width: 25%;
+      margin: 20px auto;
+      border: 2px solid $blue1;
+      border-radius: 10px;
+      padding: 10px 5px;
+      background: $white1;
+      color: $blue2;
+      font-family: $montL;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      box-shadow: 0 3px 5px $translucent;
+      transition: 0.2s ease;
+
+      &:hover {
+        border: 2px solid $white1;
+        background: $blue2;
+        border-radius: 10px;
+        color: $white1;
+        box-shadow: 0 3px 5px $blue1;
+        text-shadow: 0 0 5px $white1;
+      }
+    }
+  }
+}
