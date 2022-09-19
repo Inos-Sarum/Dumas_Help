@@ -4,7 +4,8 @@ import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
 import Prestations from "./pages/Prestations";
 import Informations from "./pages/Informations";
-import Professional from "./pages/Professional";
+import Company from "./pages/Company";
+import Individual from "./pages/Individual";
 import FormIndividual from "./pages/FormIndividual";
 import FormCompany from "./pages/FormCompany";
 import "./styles/index.scss";
@@ -14,7 +15,8 @@ const App = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/professional" element={<Professional />} />
+        <Route path="/company" element={<Company />} />
+        <Route path="/individual" element={<Individual />} />
         <Route path="/prestations" element={<Prestations />} />
         <Route path="/informations" element={<Informations />} />
         <Route path="/formcompany" element={<FormCompany />} />

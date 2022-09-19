@@ -15,11 +15,11 @@ const Home = () => {
         </div>
         <h1>Délivrez vous de la paperasse</h1>
         <div className="choice-container">
-          <NavLink to="/professional" className="individual">
+          <NavLink to="/individual" className="individual">
             <h2>Particulier</h2>
           </NavLink>
 
-          <NavLink to="/professional" className="company">
+          <NavLink to="/company" className="company">
             <h2>Professionnel</h2>
           </NavLink>
         </div>
