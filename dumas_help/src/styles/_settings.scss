@@ -122,18 +122,38 @@ h2 {
 // Send failure or success message
 
 .form-message {
-  height: 10px;
+  display: flex;
+  max-width: 800px;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
 
   p {
-    padding: 10px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 5px;
+    height: 40px;
+    text-align: center;
+    letter-spacing: 1px;
+    border-radius: 15px;
+    font-weight: 600;
   }
 
   .success {
-    background: green;
-    color: $white1;
+    background: rgb(103, 248, 103);
   }
   .error {
-    background: green;
-    color: $white1;
+    background: rgb(252, 64, 64);
+  }
+}
+
+// Animations //
+
+@keyframes enlarge {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
   }
 }

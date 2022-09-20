@@ -7,7 +7,7 @@ const Individual = () => {
       <Header />
       <div className="presentation-container">
         <div className="presentation-individual">
-          <h2>Reprenez le dessus !! </h2>
+          <h2>Reprenez le dessus !</h2>
           <p className="p1">
             89% des personnes subissent des pertes face à l’administration.
             <br />

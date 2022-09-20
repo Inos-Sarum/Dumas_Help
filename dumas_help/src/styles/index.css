@@ -78,21 +78,54 @@ h2 {
 }
 
 .form-message {
-  height: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 800px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
 }
 
 .form-message p {
-  padding: 10px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 5px;
+  height: 40px;
+  text-align: center;
+  letter-spacing: 1px;
+  border-radius: 15px;
+  font-weight: 600;
 }
 
 .form-message .success {
-  background: green;
-  color: white;
+  background: #67f867;
 }
 
 .form-message .error {
-  background: green;
-  color: white;
+  background: #fc4040;
+}
+
+@-webkit-keyframes enlarge {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes enlarge {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
 }
 
 .accueil {
@@ -209,9 +242,23 @@ h2 {
 }
 
 .presentation-company h2 {
+  position: relative;
   margin: 70px auto 50px auto;
-  padding-bottom: 10px;
-  border-bottom: 3px solid #273388;
+  padding-bottom: 15px;
+}
+
+.presentation-company h2:after {
+  position: absolute;
+  content: "";
+  height: 3px;
+  width: 0;
+  background: #273388;
+  -webkit-animation: enlarge 0.5s linear forwards;
+          animation: enlarge 0.5s linear forwards;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .presentation-company p {
@@ -329,9 +376,23 @@ h2 {
 }
 
 .presentation-individual h2 {
+  position: relative;
   margin: 70px auto 50px auto;
-  padding-bottom: 10px;
-  border-bottom: 3px solid #273388;
+  padding-bottom: 15px;
+}
+
+.presentation-individual h2:after {
+  position: absolute;
+  content: "";
+  height: 3px;
+  width: 0;
+  background: #273388;
+  -webkit-animation: enlarge 0.5s linear forwards;
+          animation: enlarge 0.5s linear forwards;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .presentation-individual p {
@@ -421,22 +482,6 @@ h2 {
 
 .presentation-individual .img-container .img1 {
   background: url("../../assets/img/00-impots.jpeg") center/cover;
-}
-
-.presentation-individual .img-container .img2 {
-  background: url("../../assets/img/00-happy-guy.jpeg") top/cover;
-}
-
-.presentation-individual .img-container .img3 {
-  background: url("../../assets/img/00-old-tired-woman.jpeg") center/cover;
-}
-
-.presentation-individual .img-container .img4 {
-  background: url("../../assets/img/00-old-happy-woman.jpeg") center/cover;
-}
-
-.presentation-individual .img-container .img5 {
-  background: url("../../assets/img/00-worried-man.jpeg") top/cover;
 }
 
 .presentation-individual .img-container .img6 {

@@ -2,9 +2,21 @@
   margin-top: 10vh;
 
   h2 {
+    position: relative;
     margin: 70px auto 50px auto;
-    padding-bottom: 10px;
-    border-bottom: 3px solid $blue1;
+    padding-bottom: 15px;
+
+    &:after {
+      position: absolute;
+      content: "";
+      height: 3px;
+      width: 0;
+      background: $blue1;
+      animation: enlarge 0.5s linear forwards;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
 
   p {
@@ -76,18 +88,18 @@
     .img1 {
       background: url("../../assets/img/00-impots.jpeg") center/cover;
     }
-    .img2 {
-      background: url("../../assets/img/00-happy-guy.jpeg") top/cover;
-    }
-    .img3 {
-      background: url("../../assets/img/00-old-tired-woman.jpeg") center/cover;
-    }
-    .img4 {
-      background: url("../../assets/img/00-old-happy-woman.jpeg") center/cover;
-    }
-    .img5 {
-      background: url("../../assets/img/00-worried-man.jpeg") top/cover;
-    }
+    // .img2 {
+    //   background: url("../../assets/img/") top/cover;
+    // }
+    // .img3 {
+    //   background: url("../../assets/img/") center/cover;
+    // }
+    // .img4 {
+    //   background: url("../../assets/img/") center/cover;
+    // }
+    // .img5 {
+    //   background: url("../../assets/img/") top/cover;
+    // }
     .img6 {
       background: url("../../assets/img/00-money.jpeg") top/cover;
     }

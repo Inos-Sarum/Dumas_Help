@@ -22,7 +22,8 @@ const FormIndividual = () => {
         (result) => {
           console.log(result.text);
           form.current.reset();
-          formMess.innerHTML = "<p className='success'> Message envoyé </p>";
+          formMess.innerHTML =
+            "<p className='success'> Votre message a été envoyé avec succès.</p>";
 
           setTimeout(() => {
             formMess.innerHTML = "";
@@ -31,7 +32,7 @@ const FormIndividual = () => {
         (error) => {
           console.log(error.text);
           formMess.innerHTML =
-            "<p className='error'> Echec de l'envoi, veuillez réessayer </p>";
+            "<p className='error'> Echec de l'envoi, veuillez réessayer. </p>";
 
           setTimeout(() => {
             formMess.innerHTML = "";

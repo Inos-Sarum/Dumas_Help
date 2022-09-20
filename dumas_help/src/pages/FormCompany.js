@@ -107,8 +107,8 @@ const FormCompany = () => {
             </li>
             <input type="submit" value="Envoyer" className="submit-btn" />
           </ul>
+          <div className="form-message"></div>
         </form>
-        <div className="form-message"></div>
       </div>
     </div>
   );
